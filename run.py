@@ -43,6 +43,7 @@ output_height = config['OPTIONS']['output_height']
 wav2lip_version = config['OPTIONS']['wav2lip_version']
 use_previous_tracking_data = config['OPTIONS']['use_previous_tracking_data']
 nosmooth = config.getboolean('OPTIONS', 'nosmooth')
+wav2lip_batch_size = config['OPTIONS']['wav2lip_batch_size']
 U = config.getint('PADDING', 'U')
 D = config.getint('PADDING', 'D')
 L = config.getint('PADDING', 'L')
@@ -388,6 +389,8 @@ while True:
         str(preview_settings),
         "--mouth_tracking",
         str(mouth_tracking),
+        "--wav2lip_batch_size",
+        str(wav2lip_batch_size),
     ]
 
     # Run the command
